@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './main-container/home/home.component';
 import { AboutComponent } from './main-container/about/about.component';
 import { ContactComponent } from './main-container/contact/contact.component';
+import { MyTableComponent } from './main-container/my-table/my-table.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactComponent } from './main-container/contact/contact.component';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    MyTableComponent
   ],
   imports: [                           // массив подключаемых модулей
     BrowserModule,                     // адаптирует app  для браузера, обязат. модуль
