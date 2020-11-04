@@ -10,7 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './main-container/home/home.component';
 import { AboutComponent } from './main-container/about/about.component';
 import { ContactComponent } from './main-container/contact/contact.component';
-import { MyTableComponent } from './main-container/my-table/my-table.component';
+import { MyTableComponent } from './main-container/home/my-table/my-table.component';
 
 @NgModule({
   declarations: [

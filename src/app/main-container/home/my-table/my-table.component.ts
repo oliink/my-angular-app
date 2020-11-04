@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-my-table',
   templateUrl: './my-table.component.html',
   styleUrls: ['./my-table.component.scss']
 })
-export class MyTableComponent {      
+export class MyTableComponent {
 
-  public products: { id:number; name: string; price: number }[] = [
+  @Input() public products: { id:number; name: string; price: number }[] = [
     { id: 1, name : 'product 1', price : 100 }, 
     { id: 2, name : 'product 2', price : 200 }, 
     { id: 3, name : 'product 3', price : 300 }, 
@@ -20,13 +20,15 @@ export class MyTableComponent {
     { id: 10, name : 'product 10', price : 1000 }
   ];
 
-  public delete(id: number): void {
+  @Output() public sayId: EventEmitter<number> = new EventEmitter<number>();
+
+  public delete(id:number) :void {
     for(let i = 0; i < this.products.length; i++) {
       if (this.products[i].id === id) {
       this.products.splice(i, 1);
       }
     }
-    console.log(id);
+    this.sayId.emit(id);
   }
 
 }
